@@ -7,25 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header>
       <nav>
-        <div class="row clearfix">
-          <img src="" alt="logo" class="logo">
-          <ul class="main-nav animated slideInDown" id="check">  
-            <li><a href="#">Private Dining</a></li>
-            <li><a href="#">Contact US</a></li>
-            <li><a href="#">Book a table</a></li>
+        <div class="">
+          <ul class="nav justify-content-end animated slideInDown" id="check">  
+            <li class="nav-item"><a class="nav-link" onclick='createPrivateForm()' id="private-button">Private Dining</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact US</a></li>
+            <li class="nav-item"><a class="nav-link" id="booking-button" onclick='createForm()' >Book a table</a></li>
           </ul>
           <a href="#" class="mobile-icon" onclick="slideshow()">
             <i class="fas fa-bars"></i>
           </a>
         </div>
       </nav>
-
+ 
       <div class="main-content-header">
         <h1>We offer sophisticated and <br/>
           relaxed all day dining to local residents <br/>
@@ -36,12 +40,13 @@
       </div>
     </header>
 
+
     <div class="other-restaurants">
       <div class="other-restaurants-inner">
         <div class="container">
           <h2>The Garden House</h2>
           <div class="select-styled">
-            <select>
+            <!-- <select>
               <option disabled="" selected="" hidden="">Other Restaurants</option>
               <optgroup label="THE GARDEN CAFES">
                 <option>The Garden Marylebone</option>
@@ -53,172 +58,188 @@
                 <option>The Garden Clifton</option>
                 <option>The Garden St John's Wood</option>
               </optgroup>
-            </select>
+            </select> -->
           </div>
         </div>
-        
       </div>
+    </div>
         
 
-      <section class="main-body">
-        <div>
-          <div class="location-landing-widgets">
-            <div class="location-widget intro-text">
-              <div class="container">
-                <div class="inner-text">
-                  <p>THE WORLD’S FIRST OPENED IN 1920S LA, COURTESY OF ALEJANDRO BORQUES. THE UK’S FIRST OPENED IN MANCHESTER’S PICCADILLY GARDENS BACK IN 2005, COURTESY OF, WELL, US.</p> <br/>
-                  <p>YOU CAN CALL US PIONEERS, YOU CAN CALL US REVOLUTIONARIES... WELL ALRIGHT, MAYBE THAT’S A BIT MUCH BUT WE CAN ALL AGREE THAT WE WERE AHEAD OF THE CURVE, BURRITO-WISE.</p><br/>
-                  <p>YOU CAN CALL US PIONEERS, YOU CAN CALL US REVOLUTIONARIES... WELL ALRIGHT, MAYBE THAT’S A BIT MUCH BUT WE CAN ALL AGREE THAT WE WERE AHEAD OF THE CURVE, BURRITO-WISE.</p>
+    <div class="main-body">
+      <div class="container"></div>
+      <div class="location-landing-widgets">
 
-                  <span>*Please note that our garden is open daily from 12pm to 10pm.</span>
-                </div>
-              </div>
+        <div class="location-widget intro-text">
+          <div class="container">
+            <div class="inner-text">
+              <p>THE WORLD’S FIRST OPENED IN 1920S LA, COURTESY OF ALEJANDRO BORQUES. THE UK’S FIRST OPENED IN MANCHESTER’S PICCADILLY GARDENS BACK IN 2005, COURTESY OF, WELL, US.</p> <br/>
+              <p>YOU CAN CALL US PIONEERS, YOU CAN CALL US REVOLUTIONARIES... WELL ALRIGHT, MAYBE THAT’S A BIT MUCH BUT WE CAN ALL AGREE THAT WE WERE AHEAD OF THE CURVE, BURRITO-WISE.</p><br/>
+              <p>YOU CAN CALL US PIONEERS, YOU CAN CALL US REVOLUTIONARIES... WELL ALRIGHT, MAYBE THAT’S A BIT MUCH BUT WE CAN ALL AGREE THAT WE WERE AHEAD OF THE CURVE, BURRITO-WISE.</p>
+
+              <span>*Please note that our garden is open daily from 12pm to 10pm.</span>
             </div>
+          </div>
+        </div>
 
-            <div class="location-widget links">
-              <div class="container-fluid">
-                <div class="flex-list">
-                  <a href="#" class="flex-item">
-                    <div class="image">
-                      <figure class="img" style="background-image: url('./images/private.jpeg');"></figure>
-                    </div>
-                    <div class="text">
-                      <h3>Winter Garden</h3>
-                      <p>Tucked away at the back of the restaurant is our beautiful terrace and garden.</p>
-
-                      <div class="btn-wrap">
-                        <div class="text-btn">
-                          Read More
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-item">
-                    <div class="image">
-                      <figure class="img" style="background-image: url('./images/architec.jpg');"></figure>
-                    </div>
-                    <div class="text">
-                      <h3>Private Dining</h3>
-                      <p>Tucked away at the back of the restaurant is our beautiful terrace and garden.</p>
-
-                      <div class="btn-wrap">
-                        <div class="text-btn">
-                          Read More
-                        </div>
-                      </div>
-            
-                    </div>
-
-                  </a>
-                  <a href="#" class="flex-item">
-                    <div class="image">
-                      <figure class="img" style="background-image: url('./images/salon.jpeg');"></figure>
-                    </div>
-                    <div class="text">
-                      <h3>Gift Cards</h3>
-                      <p>Tucked away at the back of the restaurant is our beautiful terrace and garden.</p>
-
-                      <div class="btn-wrap">
-                        <div class="text-btn">
-                          Read More
-                        </div>
-                      </div>
-                    </div>
-                  </a>                  
+        <div class="location-widget links">
+          <div class="container-fluid">
+            <div>
+              <a href="#" class="flex-item">
+                <div class="image">
+                  <figure class="img" style="background-image: url('./images/private.jpeg');"></figure>
                 </div>
-              </div>
-            </div>
+                <div class="text">
+                  <h3>Winter Garden</h3>
+                  <p>Tucked away at the back of the restaurant is our beautiful terrace and garden.</p>
 
-            <div class="location-widget location-details">
-              <div class="container-fluid">
-                <div class="column" >
-                  <div class="map-canvas-wrap col-md-6">
-                    <h3>Google map</h3>
+                  <div class="btn-wrap">
+                    <div class="text-btn">
+                      Read More
+                    </div>
                   </div>
-                  <div class="landing-contact col-md-6">
-                    <div class="title">
-                      <h3>Find us</h3>
+                </div>
+              </a>
+              <a href="#" class="flex-item">
+                <div class="image">
+                  <figure class="img" style="background-image: url('./images/architec.jpg');"></figure>
+                </div>
+                <div class="text">
+                  <h3>Private Dining</h3>
+                  <p>Tucked away at the back of the restaurant is our beautiful terrace and garden.</p>
+
+                  <div class="btn-wrap">
+                    <div class="text-btn">
+                      Read More
                     </div>
-                    <div class="adress">
-                      <i class="fas fa-map-marker"></i>
-                      <p>The Ivy Chelsea Garden<br/>
-                      195 -197 King's Road<br/>
-                      London SW3 5EQ<br/>
-                      </p>
-                      <a href="" class="btn btn-book"></a>
-                      <ul>
-                        <i class="far fa-clock"></i>
-                        <li>Monday - Saturday: 8am-12.30am</li>
-                        <li>(Last booking 10.45pm)</li>
-                        <li>Sunday & Bank Holidays: 9am-12.30am (Last booking 10pm)</li>
-                      </ul>
-                      <div>
-                        <i class="fas fa-phone"></i>
-                        <p class="number">CALL: 020 3301 0300</p>
-                      </div>
+                  </div>
+        
+                </div>
+
+              </a>
+              <a href="#" class="flex-item">
+                <div class="image">
+                  <figure class="img" style="background-image: url('./images/salon.jpeg');"></figure>
+                </div>
+                <div class="text">
+                  <h3>Gift Cards</h3>
+                  <p>Tucked away at the back of the restaurant is our beautiful terrace and garden.</p>
+
+                  <div class="btn-wrap">
+                    <div class="text-btn">
+                      Read More
                     </div>
-            
+                  </div>
+                </div>
+              </a>                  
+            </div>
+          </div>
+        </div>
+
+        <div class="location-widget location-details">
+          <div class="container-fluid">
+            <div class="column">
+
+              <div class="map-canvas-wrap col-md-6">
+                <h3>Google map</h3>
+              </div>
+
+              <div class="contact col-md-6">
+                <div class="title">
+                  <h3>Find us</h3>
+                </div>
+                <div class="address">
+                  <i class="fas fa-map-marker"></i>
+                  <p class="contact-address" >
+                    The New Garden<br/>
+                    157 -147 St John's Road<br/>
+                    London TW8 1PEQ<br/>
+                  </p>
+
+                  <div>
+                    <i class="far fa-clock"></i>
+                    <ul class="contact-hours">
+                      <li>Monday - Saturday: 8am-12.30am</li>
+                      <li>(Last booking 10.45pm)</li>
+                      <li>Sunday & Bank Holidays: 9am-12.30am (Last booking 10pm)</li>
+                    </ul>
                   </div>
                   
+                  <i class="fas fa-phone"></i>
+                  <div class="contact-number">
+                    <p class="number">CALL: <b> 020 00255 5470</b></p>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
-      </section>
+
+      </div>
     </div>
     
+    <br/>
 
+    <div class="main-footer">
+      <footer id="footer-scroll">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-title"><h3>Sign up our newsletter</h3></div>
+            <hr/>
 
-    <footer>
-      <section>
-        <div class="container">
-          <h2>Sign up to our newsletter</h2>
-          <form>
-            <div class="form-group">
-              <input type="text" name="last_name" class="form-control" placeholder="Name">
-            </div>
-        
-            <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email Address*">
-            </div>
-            <div>
-                <input type="tel"  name="phone" class="form-control" placeholder="Postcode* ">
-            </div>
+            <div class="newsletter-widget">
+              <form class="form-container" id="newsletter_info">    
+                <div class="form-group">
+                  <input type="text" name="last_name" class="form-control" placeholder="Name">
+                </div>
 
-            <input type="checkboxe" name="I wish to receive your emails">
-            <button type="submit" class="btn btn-success btn-block form-group">SUBMIT</button>
-          </form>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="Email *">
+                </div>
 
-          <p>We’d like to keep in touch with you about all our restaurants with exclusive news and advance booking opportunities. We will contact you about special events, new openings as well as the latest seasonal menus.  We will keep your data secure, and of course would never sell or share data.  You can change your mind at any time by clicking unsubscribe on any email you receive or by clicking the link on our website.
-            <strong> For further detail on our data policy and protection.</strong></p>
-        </div>
-      </section>
-
-      <div class="container">
-        <ul>
-          <li>Cookie Policy</li>
-          <li>Privacy Policy</li>
-          <li>Disclaimer</li>
-          <li>SiteMap</li>
-          <li></li>
-
-        </ul>
-      </div>
+                <div class="form-group">
+                  <input type="postcode"  name="phone" class="form-control" placeholder="Postcode *">
+                </div>
           
-    </footer>
-      
-    <script type="text/javascript">
-      
-      function slideshow(){
-        var x = document.getElementById("check");
-        if (x.style.display === "none"){
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
+                <button type="submit" class="form-group btn-submit ">Submit</button>
+              </form>
 
-    </script>
+              <div class="form-group whole-input" data-required data-fieldtype="cb">
+                <ul class="radio-check-list">
+                  <li class="checkbox-cont">
+                    <input type="checkbox" name="#" value="#">
+                    <label>
+                      <span>I wish to receive your emails</span>
+                    </label>
+                  </li>
+                </ul>
+                <p>* Mandatory fields</p>
+              </div>
+              <div class="clearfix"></div>
+
+              <p>
+                We’d like to keep in touch with you about all our restaurants with exclusive news and advance booking opportunities. We will contact you about special events, new openings as well as the latest seasonal menus.  We will keep your data secure, and of course would never sell or share data.  You can change your mind at any time by clicking unsubscribe on any email you receive or by clicking the link on our website.  For further detail on our data policy and protection.
+              </p>
+            </div>
+          </div>
+        </div>
+
+   
+        <div class="footer-bottom">
+          <nav class="footer-nav">
+            <div class="container-fluid">
+              <ul class="footer-links">
+                <li><a>Cookie Policy</a></li>
+                <li><a>Privacy Policy</a></li>
+                <li><a>Site map</a></li>
+                <li><a>TheGardenHouse</a></li>
+              </ul>
+            </div>
+          </nav>   
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

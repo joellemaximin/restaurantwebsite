@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/contact.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="mobile-icon" onclick="slideshow()">
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul class="nav justify-content-end animated slideInDown" id="check">  
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <wrapper>
+        <h2>Besoin de nous envoyer un message?</h2>
+        <span>Notre service client se fera un plaisir de vous répondre! <small>Réponse sous 24H</small></span>
+        <br/>
+        <p>Nous sommes aussi disponible a ce numéro : +44 722849225</p>
+
+        <form class="container" id="contact-form">
+        
+            <div id="formContact">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">First name *</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="firstname" id="contact_firstname" class="form-control" >
+                    </div>
+                </div>
+                        
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Last name *</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="lastname" id="contact_lastname" class="form-control" >
+                    </div>
+                </div>
+                        
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Email *</label>
+                    <div class="col-sm-6">
+                        <input type="email" name="email" id="contact_mail" class="form-control" >
+                    </div>
+                </div>
+
+                <div class="messages">
+
+                </div>
+        
+    
+                <input type="submit" class="btn btn-primary text-center submit" onclick="send()" value="Submit">
+
+            </div>
+            
+        </form>
+    </wrapper>
+
+    <div class="footer">
+        
+    </div>
+
+
+
+
+    <script src="js/contact.js"></script>
+
+</body>
+</html>
